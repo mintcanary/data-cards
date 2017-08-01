@@ -1,0 +1,5 @@
+title: data-cards demo
+---
+body:
+
+Example of the "data-cards" design pattern, used to preview and add metadata to table columns, in a browser friendly way. Source code [here](https://github.com/smth/data-cards).

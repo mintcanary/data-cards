@@ -1,0 +1,7 @@
+[project]
+name = data-cards
+
+[servers.ghpages]
+enabled = yes
+default = yes
+target = ghpages://smth/data-cards
