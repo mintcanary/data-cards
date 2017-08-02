@@ -9,7 +9,7 @@ In use
 
 This demo is built with [Lektor](https://www.getlektor.com/).
 
-It has a few [dependencies](package.json), so do `npm install` and then `npm run build`.
+It has a few [dependencies](package.json), so do `npm install`.
 
 `grunt` will watch for changes to your [SCSS files](assets/scss), and also [icons](assets/icons) (see [svgstore](https://github.com/FWeinb/grunt-svgstore)).
 

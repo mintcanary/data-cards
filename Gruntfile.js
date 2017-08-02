@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       },
       default : {
         files: {
-          'templates/includes/icons.svg': ['assets/icons/*.svg'],
+          'templates/includes/icons.svg': ['assets/src/icons/*.svg'],
         },
       },
     },
@@ -21,12 +21,22 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'assets/scss',
+          cwd: 'assets/src/scss',
           src: ['*.scss'],
           dest: 'assets/css',
           ext: '.css'
         }]
       }
+    },
+
+    concat: {
+      options: {
+        separator: '\n',
+      },
+      dist: {
+        src: ['node_modules/sortablejs/Sortable.js', 'assets/src/scripts/sorting.js'],
+        dest: 'assets/js/data-cards.js',
+      },
     },
 
 		watch: {
@@ -35,9 +45,13 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			},
       icons: {
-				files: 'assets/icons/*.svg',
+				files: 'assets/src/icons/*.svg',
 				tasks: ['svgstore']
-			}
+			},
+      js: {
+        files:'assets/src/scripts/*.js',
+        tasks: ['concat']
+      }
 		}
   });
 
@@ -45,6 +59,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgstore');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.registerTask('icons', ['svgstore']);
   grunt.registerTask('default',['watch']);
