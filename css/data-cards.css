@@ -37,6 +37,20 @@
           fill: currentColor; }
         .data-cards .card header .action:hover {
           opacity: 1; }
+      .data-cards .card header .drag {
+        float: left;
+        margin-left: -0.05em;
+        margin-top: -0.1em;
+        margin-right: 0.2em;
+        opacity: 0.8;
+        cursor: move;
+        display: none; }
+        .data-cards .card header .drag svg {
+          width: 1em;
+          height: 1em;
+          fill: currentColor; }
+        .data-cards .card header .drag:hover {
+          opacity: 1; }
       .data-cards .card header .heading {
         margin: 0;
         font-size: 1em;
@@ -157,6 +171,13 @@
           cursor: pointer;
           color: #333;
           border-color: #333; }
+    .data-cards .card.sortable-ghost {
+      opacity: 0.5; }
+      .data-cards .card.sortable-ghost .inner {
+        background-color: #fff;
+        box-shadow: 0 0 0 2px #333; }
+  .data-cards.sortable .card header .drag {
+    display: block; }
 
 .svgstore {
   display: none; }

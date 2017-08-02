@@ -54,6 +54,26 @@ $card-colour: #333;
         }
       }
 
+      .drag {
+        float: left;
+        margin-left: -0.05em;
+        margin-top: -0.1em;
+        margin-right: 0.2em;
+        opacity: 0.8;
+        cursor: move;
+        display: none;
+
+        svg {
+          width: 1em;
+          height: 1em;
+          fill: currentColor;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
       .heading {
         margin: 0;
         font-size: 1em;
@@ -216,6 +236,25 @@ $card-colour: #333;
           cursor: pointer;
           color: $card-colour;
           border-color: $card-colour;
+        }
+      }
+    }
+
+    &.sortable-ghost {
+      opacity: 0.5;
+
+      .inner {
+        background-color: #fff;
+        box-shadow: 0 0 0 2px $card-colour;
+      }
+    }
+  }
+
+  &.sortable {
+    .card {
+      header {
+        .drag {
+          display: block;
         }
       }
     }
