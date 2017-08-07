@@ -13,6 +13,7 @@ $card-colour: #333;
 
   .card {
     width: $card-base-size*16;
+    line-height: 1.4;
 
     .inner {
       display: block;
@@ -31,6 +32,8 @@ $card-colour: #333;
       color: #fff;
       padding: $card-gutter/2;
       margin: 0;
+      display: flex;
+      align-items: center;
 
       .action {
         color: inherit;
@@ -38,15 +41,16 @@ $card-colour: #333;
         border: none;
         outline: none;
         padding: 0;
-        float: right;
-        margin-right: -0.05em;
-        margin-top: -0.1em;
         opacity: 0.8;
+        height: 1em;
+        line-height: 1;
+        cursor: pointer;
 
         svg {
           width: 1em;
           height: 1em;
           fill: currentColor;
+          vertical-align: baseline;
         }
 
         &:hover {
@@ -55,18 +59,17 @@ $card-colour: #333;
       }
 
       .drag {
-        float: left;
-        margin-left: -0.05em;
-        margin-top: -0.1em;
-        margin-right: 0.2em;
         opacity: 0.8;
         cursor: move;
         display: none;
+        padding-right: 0.2em;
+        height: 1em;
 
         svg {
           width: 1em;
           height: 1em;
           fill: currentColor;
+          vertical-align: baseline;
         }
 
         &:hover {
@@ -80,6 +83,7 @@ $card-colour: #333;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        flex-grow: 1;
       }
     }
 
@@ -173,6 +177,7 @@ $card-colour: #333;
         border-radius: 0;
         padding: 0 5px;
         font-size: 15px;
+        box-sizing: border-box;
 
         &:focus {
           border-color: $card-colour;
@@ -191,6 +196,7 @@ $card-colour: #333;
         transition: height 0.5s;
         padding: 0 5px;
         font-size: 15px;
+        box-sizing: border-box;
 
         &:focus {
           border-color: $card-colour;
