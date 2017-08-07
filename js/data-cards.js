@@ -1491,11 +1491,14 @@
 });
 
 // define draggable parent
-var dc = document.getElementsByClassName("data-cards");
-dc[0].className += " sortable";
+var dcs = document.getElementsByClassName("data-cards");
 
-var sortable = new Sortable(dc[0], {
-	draggable: ".draggable",
-  handle: ".drag",
-  animation: 200
+[].forEach.call(dcs, function (dc) {
+	dc.className += " sortable";
+
+	var sortable = new Sortable(dc, {
+		draggable: ".draggable",
+	  handle: ".drag",
+	  animation: 200
+	});
 });
