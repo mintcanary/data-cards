@@ -6,6 +6,7 @@ Demo [here](http://p.smth.uk/data-cards/).
 
 In use
 - [OS Packager](http://p.smth.uk/os-mockup-packager/packager/describe-data/)
+- [Packagist](http://p.smth.uk/packagist/)
 
 This demo is built with [Lektor](https://www.getlektor.com/).
 
